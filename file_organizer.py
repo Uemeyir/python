@@ -42,6 +42,8 @@ dirs = {
     '.cpp': 'Program Files',
     '.c': 'Program Files',
     '.js':  'Program Files',
+    '.tar': 'Program Files',
+    '.jar': 'Program Files',
 }
 
 
@@ -58,7 +60,7 @@ for file in PATH.iterdir():
     get_absolute_path = file.absolute()
 
     if get_absolute_path.is_file():
-        # Get the last index from point
+        # Get the directory name
         dir_name = get_dir(file)
         destination = PATH / dir_name
 
